@@ -1,0 +1,22 @@
+From 623ab86e42880754f5b91e3b95bda93e85413a1c Mon Sep 17 00:00:00 2001
+From: Ryan Nguyen <ryan.nguyen@styl.solutions>
+Date: Tue, 7 Mar 2017 14:50:44 +0700
+Subject: [PATCH] udev-re-enable-mount-propagation-for-udevd
+
+Signed-off-by: Ryan Nguyen <ryan.nguyen@styl.solutions>
+---
+ units/systemd-udevd.service.in | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/units/systemd-udevd.service.in b/units/systemd-udevd.service.in
+index 2791f73..04f0b98 100644
+--- a/units/systemd-udevd.service.in
++++ b/units/systemd-udevd.service.in
+@@ -21,4 +21,3 @@ Sockets=systemd-udevd-control.socket systemd-udevd-kernel.socket
+ Restart=always
+ RestartSec=0
+ ExecStart=@rootlibexecdir@/systemd-udevd
+-MountFlags=slave
+-- 
+1.9.1
+
