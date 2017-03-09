@@ -15,5 +15,8 @@ IMAGE_INSTALL_append = " connman connman-client net-tools"
 
 IMAGE_INSTALL_append = " util-linux"
 
+# OpenCV packages
+IMAGE_INSTALL_append = " opencv opencv-dev opencv-samples cmake"
+
 # Utilities
 IMAGE_INSTALL_append = " sysbench vim"
